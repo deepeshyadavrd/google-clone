@@ -1,9 +1,13 @@
 import React from 'react'
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Routes as Rs, Route } from 'react-router-dom';
+import Search from './Search';
 const Routes = () => {
   return (
     <div className='p-4'>
-        <h1>Routes</h1>
+        <Rs>
+        <Route path="/" element={<Routes />} />
+        <Route path="/quiz" element={<Search />} />
+        </Rs>
     </div>
   )
 }
