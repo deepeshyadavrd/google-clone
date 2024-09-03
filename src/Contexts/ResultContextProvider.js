@@ -1,4 +1,10 @@
 import React, { createContext, useContext, useState } from 'react';
 
 const resultContext = createContext();
-const baseUrl = 'https://api.github.com/search/repositories?q=';
+const baseUrl = 'https://google-search74.p.rapidapi.com/';
+
+export const ResultContextProvider = ({ children }) => {
+    const [results, setResults] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
+    const [searchTerm, setSearchTerm] = useState('');
+}
