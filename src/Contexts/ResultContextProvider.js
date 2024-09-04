@@ -15,9 +15,15 @@ export const ResultContextProvider = ({ children }) => {
         const response = await fetch(`${baseUrl}${type}`, {
             method: 'GET',
             headers: {
-                
+                'x-user-agent': 'desktop',
+                'x-rapidapi-host': 'google-search74.p.rapidapi.com',
+                'x-rapidapi-key': '537ce21098msh727b0e12555e9f5p16991ejsncbeb99969277'
             }
-        })
+        });
+
+        const data = await response.json();
+
+        setResults(data);
 
     }
 }
