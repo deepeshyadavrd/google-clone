@@ -12,7 +12,12 @@ export const ResultContextProvider = ({ children }) => {
     const getResults = async(type) => {
         setIsLoading(true);
 
-        const response = await fetch(`${baseUrl}${type}`)
+        const response = await fetch(`${baseUrl}${type}`, {
+            method: 'GET',
+            headers: {
+                
+            }
+        })
 
     }
 }
