@@ -7,4 +7,12 @@ export const ResultContextProvider = ({ children }) => {
     const [results, setResults] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [searchTerm, setSearchTerm] = useState('');
+
+    // /videos, /search, /images
+    const getResults = async(type) => {
+        setIsLoading(true);
+
+        const response = await fetch(`${baseUrl}${type}`)
+
+    }
 }
