@@ -25,5 +25,6 @@ export const ResultContextProvider = ({ children }) => {
 
         setResults(data);
         setIsLoading(false);
+        
     }
 }
