@@ -8,7 +8,6 @@ export const ResultContextProvider = ({ children }) => {
     const [isLoading, setIsLoading] = useState(false);
     const [searchTerm, setSearchTerm] = useState('');
 
-    // /videos, /search, /images
     const getResults = async(type) => {
         setIsLoading(true);
 
@@ -27,4 +26,11 @@ export const ResultContextProvider = ({ children }) => {
         setIsLoading(false);
         
     }
+
+    return (
+        <ResultContext.Provider>
+
+        </ResultContext.Provider>
+    )
+
 }
