@@ -11,9 +11,15 @@ const Results = () => {
   const location = useLocation();
 
   if (isLoading) return <Loading />
-  return (
-    <div>Results</div>
-  )
+  console.log(location.pathname);
+  
+  switch (location.pathname) {
+    case '/search':
+      return 'SEARCH';
+  
+    default:
+      return 'ERROR';
+  }
 }
 
 export default Results
