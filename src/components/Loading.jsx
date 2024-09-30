@@ -5,6 +5,7 @@ const Loading = () => {
   return (
     <div className="flex justify-center items-center">
         <Loader type="Puff" color="#00BFFF" height={550} weight={80}/>
+      
     </div>
   )
 }
