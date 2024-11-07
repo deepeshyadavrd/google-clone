@@ -14,7 +14,7 @@ const Results = () => {
       getResults('/search/q=Javascript Mastery&num=40')
     }, []);
   if (isLoading) return <Loading />
-  console.log(location.pathname);
+  // console.log(location.pathname);
   
   switch (location.pathname) {
     case '/search':
