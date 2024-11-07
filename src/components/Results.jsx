@@ -10,6 +10,9 @@ const Results = () => {
   const { results, isLoading, getResults, searchTerm } = useResultContext();
   const location = useLocation();
 
+    useEffect(() => {
+      getResults('/search/q=Javascript Mastery&num=40')
+    }, []);
   if (isLoading) return <Loading />
   console.log(location.pathname);
   
@@ -17,7 +20,7 @@ const Results = () => {
     case '/search':
       return (
         <div className='flex flex-wrap justify-between space-y-6 sm:px-56'>
-          {/* {results?.results?.map( ()=>(
+          {/* {results?.results?.map( ({ link, title })=>(
 
           ))} */}
         </div>
