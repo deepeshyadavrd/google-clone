@@ -11,7 +11,7 @@ const Results = () => {
   const location = useLocation();
 
     useEffect(() => {
-      getResults('/search/web?q=javascript mastery&gl=US&lr=lang_en&num=10&start=0')
+      getResults('?query=Javascript Mastery&limit=10')
     }, []);
   if (isLoading) return <Loading />
   
