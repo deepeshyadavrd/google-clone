@@ -1,12 +1,12 @@
 import React, { createContext, useContext, useState } from 'react';
 
 const ResultContext = createContext();
-const baseUrl = 'https://google-search83.p.rapidapi.com/google';
+const baseUrl = 'https://api.serpstack.com/search?access_key=ac186cad2817d317200a4b98f4eaf58f';
 
 export const ResultContextProvider = ({ children }) => {
     const [results, setResults] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
-    const [searchTerm, setSearchTerm] = useState('');
+    const [searchTerm, setSearchTerm] = useState('javascript mastery');
 
     const getResults = async(type) => {
         setIsLoading(true);
@@ -15,8 +15,8 @@ export const ResultContextProvider = ({ children }) => {
             method: 'GET',
             headers: {
                 'x-user-agent': 'desktop',
-                'x-rapidapi-host': 'google-search74.p.rapidapi.com',
-                'x-rapidapi-key': '537ce21098msh727b0e12555e9f5p16991ejsncbeb99969277'
+                // 'x-rapidapi-host': 'google-search74.p.rapidapi.com',
+                // 'access_key': 'ac186cad2817d317200a4b98f4eaf58f'
             }
         });
 
