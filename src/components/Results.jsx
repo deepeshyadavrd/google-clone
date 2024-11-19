@@ -16,6 +16,7 @@ const Results = () => {
           getResults(`&query=${searchTerm}&type=images`)
         }else if(location.pathname === '/news'){
           getResults(`&query=${searchTerm}&type=news`)
+          
         }else{
           getResults(`&query=${searchTerm}`)
         }
